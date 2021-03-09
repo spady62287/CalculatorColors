@@ -1,0 +1,22 @@
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.66.0"
+
+default_platform :ios
+
+platform :ios do  
+  before_all do
+    ENV["DEVELOPER_DIR"] = "/Applications/Xcode.app/Contents/Developer"
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+  	devices: ["iPhone 8"]
+	)
+  end
+  
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/docs/Platforms.md
+# All available actions: https://github.com/fastlane/fastlane/blob/master/docs/Actions.md

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CalculatorColorsUITests.xctest' tests='13' failures='0'>
+  <testsuite name='CalculatorColorsTests.CalculatorColorsTests' tests='2' failures='0'>
+    <testcase classname='CalculatorColorsTests.CalculatorColorsTests' name='testExample' time='0.001'/>
+    <testcase classname='CalculatorColorsTests.CalculatorColorsTests' name='testPerformanceExample' time='0.332'/>
+  </testsuite>
+  <testsuite name='CalculatorColorsTests.ColorTests' tests='5' failures='0'>
+    <testcase classname='CalculatorColorsTests.ColorTests' name='testBackSpace' time='0.002'/>
+    <testcase classname='CalculatorColorsTests.ColorTests' name='testCorrectColorReceived' time='0.001'/>
+    <testcase classname='CalculatorColorsTests.ColorTests' name='testCorrectNameReceived' time='0.000'/>
+    <testcase classname='CalculatorColorsTests.ColorTests' name='testProcessBackspaceReceivesCorrectColor' time='0.000'/>
+    <testcase classname='CalculatorColorsTests.ColorTests' name='testWhiteColorReceivedForBadData' time='0.000'/>
+  </testsuite>
+  <testsuite name='CalculatorColorsTests.OperatorTests' tests='4' failures='0'>
+    <testcase classname='CalculatorColorsTests.OperatorTests' name='testCollect' time='0.001'/>
+    <testcase classname='CalculatorColorsTests.OperatorTests' name='testFlatMapWithMax2Publishers' time='0.001'/>
+    <testcase classname='CalculatorColorsTests.OperatorTests' name='testShareReplay' time='0.001'/>
+    <testcase classname='CalculatorColorsTests.OperatorTests' name='testTimerPublish' time='1.502'/>
+  </testsuite>
+  <testsuite name='CalculatorColorsUITests.CalculatorColorsUITests' tests='2' failures='0'>
+    <testcase classname='CalculatorColorsUITests.CalculatorColorsUITests' name='testExample' time='1.570'/>
+    <testcase classname='CalculatorColorsUITests.CalculatorColorsUITests' name='testLaunchPerformance' time='14.741'/>
+  </testsuite>
+</testsuites>
