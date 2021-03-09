@@ -1,0 +1,40 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  build-and-test:
+    timeout-minutes: 30
+    runs-on: [self-hosted, macOS, X64]
+    env:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+      BUNDLE_PATH: vendor/bundle
+    steps:
+      - uses: actions/checkout@v1
+      - name: Output ruby versions
+        run: ruby -v
+
+      - name: Output environment variables
+        run: env
+
+      - name: Cache gems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-CalculatorColors-${{ hashFiles('**/Gemfile.lock') }}
+          
+      - name: Install gems
+        run: bundle install
+    
+      - name: Build and run tests
+        run: bundle exec fastlane test
+        
+      - name: Archive fastlane test results
+        if: always()
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: test-results
+          path: fastlane/test_output
